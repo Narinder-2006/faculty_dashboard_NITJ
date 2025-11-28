@@ -1,7 +1,7 @@
 from serpapi import GoogleSearch
 import pandas as pd, time
 
-API_KEY = "16f475f2fc92388a94f71653d083a892e3b0f873d263757059d063265fa78797"
+API_KEY = "YOUR-API-KEY"
 AUTHOR_ID = "S2tBrxcAAAAJ"
 
 all_articles, start = [], 0
@@ -38,4 +38,5 @@ df = pd.DataFrame([
 df["Year"] = pd.to_numeric(df["Year"], errors="coerce")
 df = df.sort_values(by="Year", ascending=False)
 df.to_excel("data.xlsx", index=False)
+
 print("Scrapping Completed!")
